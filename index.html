@@ -1,123 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Farmer Rwanda</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f8f1;
-            color: #263526;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Farmer Rwanda | Smart Agriculture</title>
 
-        header {
-            background: #176b36;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        nav {
-            background: #104d29;
-            padding: 15px;
-            text-align: center;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f4;
+    color: #183b29;
+    line-height: 1.6;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 10px;
-        }
+header {
+    background: #104b2c;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-        }
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
 
-        .hero h2 {
-            color: #176b36;
-            font-size: 32px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-size: 14px;
+}
 
-        .hero button {
-            background: #176b36;
-            color: white;
-            padding: 14px 25px;
-            border: none;
-            border-radius: 6px;
-        }
+.hero {
+    background: linear-gradient(120deg, #104b2c, #23864c);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
 
-        .features {
-            padding: 30px 20px;
-            text-align: center;
-        }
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
 
-        .feature {
-            background: white;
-            padding: 20px;
-            margin: 15px auto;
-            max-width: 500px;
-            border-radius: 10px;
-        }
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+}
 
-        footer {
-            background: #104d29;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+.button {
+    display: inline-block;
+    background: #b8e986;
+    color: #104b2c;
+    padding: 13px 25px;
+    margin-top: 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 55px 7%;
+    text-align: center;
+}
+
+.section-title {
+    color: #176b39;
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+.intro {
+    max-width: 700px;
+    margin: auto;
+    color: #52665a;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.card .emoji {
+    font-size: 40px;
+}
+
+.card h3 {
+    color: #176b39;
+    margin: 12px 0;
+}
+
+.about {
+    background: #e8f2e8;
+}
+
+footer {
+    background: #104b2c;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>🌱 Smart Farmer Rwanda</h1>
-    <p>Technology for Better Agriculture</p>
+    <div class="logo">🌱 Smart Farmer Rwanda</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#features">Our Services</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section class="hero">
-    <h2>Welcome to Smart Farmer Rwanda</h2>
-    <p>Empowering farmers with technology, knowledge and better market opportunities.</p>
-    <button>Explore Our Platform</button>
+<section class="hero" id="home">
+    <h1>Growing a Smarter Agricultural Future</h1>
+    <p>
+        Empowering farmers worldwide through agricultural
+        technology, crop information and better market opportunities.
+    </p>
+    <a href="#services" class="button">Explore Our Services</a>
 </section>
 
-<section class="features" id="features">
-    <h2>Our Services</h2>
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <p class="intro">
+        Discover technology and solutions designed to support farmers.
+    </p>
 
-    <div class="feature">
-        <h3>🌿 Crop Disease Detection</h3>
-        <p>Helping farmers identify crop diseases and find solutions.</p>
-    </div>
+    <div class="services">
 
-    <div class="feature">
-        <h3>🛒 Agricultural Marketplace</h3>
-        <p>Helping farmers advertise their crops and find buyers.</p>
-    </div>
+        <div class="card">
+            <div class="emoji">🌿</div>
+            <h3>Crop Disease Detection</h3>
+            <p>Get help identifying possible crop diseases and learning about solutions.</p>
+        </div>
 
-    <div class="feature">
-        <h3>🌾 Farming Information</h3>
-        <p>Access useful agricultural knowledge and modern farming tips.</p>
+        <div class="card">
+            <div class="emoji">🛒</div>
+            <h3>Farm Marketplace</h3>
+            <p>Connect farmers with buyers and discover agricultural market opportunities.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🌾</div>
+            <h3>Farming Knowledge</h3>
+            <p>Explore useful farming information, tips and modern agricultural practices.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🌍</div>
+            <h3>Global Community</h3>
+            <p>Connect farmers and agricultural communities around the world.</p>
+        </div>
+
     </div>
 </section>
 
-<section class="features" id="about">
-    <h2>About Us</h2>
-    <p>Smart Farmer Rwanda connects farmers with agricultural technology and opportunities worldwide.</p>
+<section class="about" id="about">
+    <h2 class="section-title">About Smart Farmer Rwanda</h2>
+    <p class="intro">
+        Smart Farmer Rwanda is an agricultural technology platform
+        created to connect farmers with information, technology
+        and market opportunities. Our vision is to support smarter,
+        more connected and more productive agriculture worldwide.
+    </p>
 </section>
 
-<footer id="contact">
+<section id="contact">
+    <h2 class="section-title">Join Our Agricultural Community</h2>
+    <p class="intro">
+        Together, we can build a smarter future for agriculture.
+    </p>
+    <a href="mailto:smartfarmerrwanda@gmail.com" class="button">
+        Contact Us
+    </a>
+</section>
+
+<footer>
+    <p>🌱 Smart Farmer Rwanda</p>
+    <p>Technology for Better Agriculture</p>
     <p>© 2026 Smart Farmer Rwanda. All rights reserved.</p>
 </footer>
 
 </body>
-  </html>
-    
+</html>
