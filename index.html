@@ -196,6 +196,70 @@ footer {
 </section>
 
 <section class="about" id="about">
+    
+<section id="disease-detection" style="background:#edf7ed; padding:55px 7%; text-align:center;">
+
+    <h2 style="color:#176b39; font-size:29px;">
+        🌿 Crop Disease Detection
+    </h2>
+
+    <p style="max-width:650px; margin:15px auto;">
+        Help protect your crops. Upload a picture of a plant
+        leaf to begin checking for possible diseases.
+    </p>
+
+    <div style="background:white; padding:25px; border-radius:15px; max-width:500px; margin:25px auto; box-shadow:0 3px 12px rgba(0,0,0,0.08);">
+
+        <h3 style="color:#176b39;">Upload Your Crop Photo</h3>
+
+        <p style="margin:15px;">
+            Select a clear photo of an affected plant leaf.
+        </p>
+
+        <input
+            type="file"
+            id="cropImage"
+            accept="image/*"
+            style="max-width:100%; margin:15px auto;"
+        >
+
+        <img
+            id="preview"
+            alt="Selected crop photo"
+            style="display:none; width:100%; max-width:350px; margin:20px auto; border-radius:10px;"
+        >
+
+        <p id="message" style="color:#176b39; margin-top:15px;">
+            No photo selected yet.
+        </p>
+
+    </div>
+</section>
+
+<script>
+const cropInput = document.getElementById("cropImage");
+
+cropInput.addEventListener("change", function(event) {
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    const preview = document.getElementById("preview");
+    const message = document.getElementById("message");
+
+    if (!file.type.startsWith("image/")) {
+        message.textContent = "Please select a valid image.";
+        return;
+    }
+
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = "block";
+
+    message.textContent =
+        "Photo selected successfully! AI analysis will be available in a future update.";
+});
+    </script>
+    
     <h2 class="section-title">About Smart Farmer Rwanda</h2>
     <p class="intro">
         Smart Farmer Rwanda is an agricultural technology platform
