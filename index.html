@@ -286,4 +286,77 @@ cropInput.addEventListener("change", function(event) {
 </footer>
 
 </body>
+    
+<section id="crop-doctor" class="crop-doctor">
+  <h2>🌿 AI Crop Doctor</h2>
+  <p>Get help understanding possible crop diseases.</p>
+
+  <label for="cropType">Select your crop:</label>
+  <select id="cropType">
+    <option value="">Choose a crop</option>
+    <option value="Maize">Maize</option>
+    <option value="Beans">Beans</option>
+    <option value="Tomatoes">Tomatoes</option>
+    <option value="Potatoes">Potatoes</option>
+    <option value="Cassava">Cassava</option>
+  </select>
+
+  <p>Upload a photo of your crop:</p>
+  <input type="file" id="doctorPhoto" accept="image/*">
+
+  <button onclick="checkCrop()">Check My Crop</button>
+
+  <div id="cropResult">
+    Your crop analysis will appear here.
+  </div>
+</section>
+
+<style>
+.crop-doctor {
+  background: #f0f8ed;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  text-align: center;
+}
+.crop-doctor h2 {
+  color: #237a35;
+}
+.crop-doctor select,
+.crop-doctor input,
+.crop-doctor button {
+  margin: 10px;
+  padding: 12px;
+  max-width: 100%;
+}
+.crop-doctor button {
+  background: #237a35;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+#cropResult {
+  margin-top: 20px;
+  color: #237a35;
+}
+</style>
+
+<script>
+function checkCrop() {
+  const crop = document.getElementById("cropType").value;
+  const photo = document.getElementById("doctorPhoto").files[0];
+  const result = document.getElementById("cropResult");
+
+  if (!crop || !photo) {
+    result.textContent =
+      "Please select a crop and upload its photo.";
+    return;
+  }
+
+  result.textContent =
+    "Photo received for " + crop +
+    ". AI disease analysis is not connected yet.";
+}
+</script>
+    
 </html>
